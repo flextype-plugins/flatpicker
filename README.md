@@ -186,7 +186,7 @@ blocks:
         # See https://chmln.github.io/flatpickr/examples/#flatpickr-external-elements
         wrap: false
          
-    template: plugins/flatpicker/blocks/InputFlatpicker/block.html
+    template: plugins/flatpickr/blocks/InputFlatpickr/block.html
 ```
 
 ## LICENSE
