@@ -8,7 +8,7 @@ Lightweight and powerful datetime picker plugin for Flextype.
 
 ## Dependencies
 
-The following dependencies need to be downloaded and installed for Trumbowyg Plugin.
+The following dependencies need to be downloaded and installed for Flatpickr Plugin.
 
 | Item | Version | Download |
 |---|---|---|
