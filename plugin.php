@@ -12,30 +12,30 @@ declare(strict_types=1);
 namespace Flextype\Plugin\Flatpicker;
 
 /**
- * Add Blueprint block `InputFlatpickr`
+ * Add Blueprint block `Flatpickr`
  */
-flextype('registry')->set('plugins.blueprints.settings.blocks.InputFlatpickr', 
-                          flextype('registry')->get('plugins.flatpickr.settings.blocks.InputFlatpickr'));                
+flextype('registry')->set('plugins.blueprints.settings.blocks.Flatpickr', 
+                          flextype('registry')->get('plugins.flatpickr.settings.blocks.Flatpickr'));                
 
 /**
  * Set Flatpicker locale
  */                         
 if (flextype('registry')->get('flextype.settings.locale') == 'en_US') {
     $locale = 'en';
-    flextype('registry')->set('plugins.flatpickr.settings.blocks.InputFlatpickr.properties.options.locale', $locale);
+    flextype('registry')->set('plugins.flatpickr.settings.blocks.Flatpickr.properties.options.locale', $locale);
 } else {
     $locale = strings(flextype('registry')->get('flextype.settings.locale'))->lower()->substr(0, 2)->toString();
-    flextype('registry')->set('plugins.flatpickr.settings.blocks.InputFlatpickr.properties.options.locale', $locale);
+    flextype('registry')->set('plugins.flatpickr.settings.blocks.Flatpickr.properties.options.locale', $locale);
 }
 
 /**
  * Add Flatpicker assets
  */ 
-$flatpickrCSS[] = 'project/plugins/flatpickr/blocks/InputFlatpickr/dist/css/flatpickr.min.css';
-$flatpickrJS[]  = 'project/plugins/flatpickr/blocks/InputFlatpickr/dist/js/flatpickr.min.js';
+$flatpickrCSS[] = 'project/plugins/flatpickr/blocks/Flatpickr/dist/css/flatpickr.min.css';
+$flatpickrJS[]  = 'project/plugins/flatpickr/blocks/Flatpickr/dist/js/flatpickr.min.js';
 
 if ($locale !== 'en') {
-    $flatpickrJS[] = 'project/plugins/flatpickr/InputFlatpickr/dist/lang/flatpickr/l10n/' . $locale . '.js';          
+    $flatpickrJS[] = 'project/plugins/flatpickr/Flatpickr/dist/lang/flatpickr/l10n/' . $locale . '.js';          
 } 
 
 if (flextype('registry')->get('plugins.flatpickr.settings.assetsLoadOnAdmin')) {

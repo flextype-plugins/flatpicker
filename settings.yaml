@@ -10,12 +10,12 @@ assetsLoadOnSite: false
 
 # Blocks
 blocks:
-  InputFlatpickr:
+  Flatpickr:
     properties:
       id: flatpickr
       name: flatpickr
       
-      # Flatpicker options
+      # Flatpickr options
       options:
 
         # Allows the user to enter a date directly input the input field. By default, direct entry is disabled.
@@ -157,4 +157,4 @@ blocks:
         # See https://chmln.github.io/flatpickr/examples/#flatpickr-external-elements
         wrap: false
          
-    template: plugins/flatpickr/blocks/InputFlatpickr/block.html
+    template: plugins/flatpickr/blocks/Flatpickr/block.html
