@@ -1,0 +1,18 @@
+name: Flatpicker
+version: 1.0.0
+description: Lightweight and powerful datetime picker plugin for Flextype
+icon:
+  name: flag
+  set: bootstrap
+author:
+  name: Sergey Romanenko
+  email: sergey.romanenko@flextype.org
+  url: https://flextype.org
+homepage: https://github.com/flextype-plugins/flatpicker
+bugs: https://github.com/flextype-plugins/flatpicker/issues
+license: MIT
+
+dependencies:
+  flextype: 0.9.16
+  twig: '>=2.0.0'
+  blueprints: '>=1.0.0'
