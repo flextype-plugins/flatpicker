@@ -18,7 +18,7 @@ sass.compiler      = require('node-sass');
             'node_modules/flatpickr/dist/flatpickr.min.css',
 
             // Blocks
-            'blocks/InputFlatpicker/block.scss',
+            'blocks/InputFlatpickr/block.scss',
         ])
         .pipe(sass().on('error', sass.logError))
         .pipe(autoprefixer({
@@ -28,12 +28,12 @@ sass.compiler      = require('node-sass');
             cascade: false
         }))
         .pipe(csso())
-        .pipe(concat('flatpicker.min.css'))
-        .pipe(gulp.dest("blocks/InputFlatpicker/dist/css/"))
+        .pipe(concat('flatpickr.min.css'))
+        .pipe(gulp.dest("blocks/InputFlatpickr/dist/css/"))
         .pipe(size({ showFiles: true }))
         .pipe(gzip())
-        .pipe(rename("flatpicker.min.css.gz"))
-        .pipe(gulp.dest("blocks/InputFlatpicker/dist/css/"))
+        .pipe(rename("flatpickr.min.css.gz"))
+        .pipe(gulp.dest("blocks/InputFlatpickr/dist/css/"))
         .pipe(size({ showFiles: true, gzip: true }));
 });
 
@@ -47,14 +47,14 @@ sass.compiler      = require('node-sass');
             'node_modules/flatpickr/dist/flatpickr.min.js',
 
             // Blocks
-            'blocks/InputFlatpicker/block.js'
+            'blocks/InputFlatpickr/block.js'
         ])
-        .pipe(concat('flatpicker.min.js'))
+        .pipe(concat('flatpickr.min.js'))
         .pipe(size({ showFiles: true }))
-        .pipe(gulp.dest('blocks/InputFlatpicker/dist/js/'))
+        .pipe(gulp.dest('blocks/InputFlatpickr/dist/js/'))
         .pipe(gzip())
-        .pipe(rename("flatpicker.min.js.gz"))
-        .pipe(gulp.dest("blocks/InputFlatpicker/dist/js/"))
+        .pipe(rename("flatpickr.min.js.gz"))
+        .pipe(gulp.dest("blocks/InputFlatpickr/dist/js/"))
         .pipe(size({ showFiles: true, gzip: true }));
 });
 
@@ -65,7 +65,7 @@ sass.compiler      = require('node-sass');
     return gulp
         .src(['node_modules/flatpickr/dist/*l10n/**/*.js'])
         .pipe(size({ showFiles: true }))
-        .pipe(gulp.dest('blocks/InputFlatpicker/dist/lang/flatpickr'));
+        .pipe(gulp.dest('blocks/InputFlatpickr/dist/lang/flatpickr'));
 });
 
 /**

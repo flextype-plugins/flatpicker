@@ -12,38 +12,38 @@ declare(strict_types=1);
 namespace Flextype\Plugin\Flatpicker;
 
 /**
- * Add Blueprint block `InputFlatpicker`
+ * Add Blueprint block `InputFlatpickr`
  */
-flextype('registry')->set('plugins.blueprints.settings.blocks.InputFlatpicker', 
-                          flextype('registry')->get('plugins.flatpicker.settings.blocks.InputFlatpicker'));                
+flextype('registry')->set('plugins.blueprints.settings.blocks.InputFlatpickr', 
+                          flextype('registry')->get('plugins.flatpickr.settings.blocks.InputFlatpickr'));                
 
 /**
  * Set Flatpicker locale
  */                         
 if (flextype('registry')->get('flextype.settings.locale') == 'en_US') {
     $locale = 'en';
-    flextype('registry')->set('plugins.flatpicker.settings.blocks.InputFlatpicker.properties.options.locale', $locale);
+    flextype('registry')->set('plugins.flatpickr.settings.blocks.InputFlatpickr.properties.options.locale', $locale);
 } else {
     $locale = strings(flextype('registry')->get('flextype.settings.locale'))->lower()->substr(0, 2)->toString();
-    flextype('registry')->set('plugins.flatpicker.settings.blocks.InputFlatpicker.properties.options.locale', $locale);
+    flextype('registry')->set('plugins.flatpickr.settings.blocks.InputFlatpickr.properties.options.locale', $locale);
 }
 
 /**
  * Add Flatpicker assets
  */ 
-$flatpickerCSS[] = 'project/plugins/flatpicker/blocks/InputFlatpicker/dist/css/flatpicker.min.css';
-$flatpickerJS[]  = 'project/plugins/flatpicker/blocks/InputFlatpicker/dist/js/flatpicker.min.js';
+$flatpickrCSS[] = 'project/plugins/flatpickr/blocks/InputFlatpickr/dist/css/flatpickr.min.css';
+$flatpickrJS[]  = 'project/plugins/flatpickr/blocks/InputFlatpickr/dist/js/flatpickr.min.js';
 
 if ($locale !== 'en') {
-    $flatpickerJS[] = 'project/plugins/flatpicker/InputFlatpicker/dist/lang/flatpickr/l10n/' . $locale . '.js';          
+    $flatpickrJS[] = 'project/plugins/flatpickr/InputFlatpickr/dist/lang/flatpickr/l10n/' . $locale . '.js';          
 } 
 
-if (flextype('registry')->get('plugins.flatpicker.settings.assetsLoadOnAdmin')) {
-    flextype('registry')->set('assets.admin.js.flatpicker', $flatpickerJS);
-    flextype('registry')->set('assets.admin.css.flatpicker', $flatpickerCSS);
+if (flextype('registry')->get('plugins.flatpickr.settings.assetsLoadOnAdmin')) {
+    flextype('registry')->set('assets.admin.js.flatpickr', $flatpickrJS);
+    flextype('registry')->set('assets.admin.css.flatpickr', $flatpickrCSS);
 }
 
-if (flextype('registry')->get('plugins.flatpicker.settings.assetsLoadOnSite')) {
-    flextype('registry')->set('assets.site.js.flatpicker', $flatpickerJS);
-    flextype('registry')->set('assets.site.css.flatpicker', $flatpickerCSS);
+if (flextype('registry')->get('plugins.flatpickr.settings.assetsLoadOnSite')) {
+    flextype('registry')->set('assets.site.js.flatpickr', $flatpickrJS);
+    flextype('registry')->set('assets.site.css.flatpickr', $flatpickrCSS);
 }

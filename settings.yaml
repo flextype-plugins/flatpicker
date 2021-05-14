@@ -10,10 +10,10 @@ assetsLoadOnSite: false
 
 # Blocks
 blocks:
-  InputFlatpicker:
+  InputFlatpickr:
     properties:
-      id: flatpicker
-      name: flatpicker
+      id: flatpickr
+      name: flatpickr
       
       # Flatpicker options
       options:

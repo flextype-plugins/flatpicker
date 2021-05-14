@@ -1,5 +1,5 @@
 {
-  "name": "Flatpicker",
+  "name": "Flatpickr",
   "version": "1.0.0",
   "description": "Lightweight and powerful datetime picker plugin for Flextype",
   "homepage": "https://flextype.org",
@@ -14,7 +14,7 @@
     "trumbowyg"
   ],
   "bugs": {
-    "url": "https://github.com/flextype-plugins/flatpicker/issues"
+    "url": "https://github.com/flextype-plugins/flatpickr/issues"
   },
   "dependencies": {
     "gulp": "^4.0.2",

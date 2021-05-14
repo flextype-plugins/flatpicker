@@ -1,4 +1,4 @@
-name: Flatpicker
+name: Flatpickr
 version: 1.0.0
 description: Lightweight and powerful datetime picker plugin for Flextype
 icon:
@@ -8,8 +8,8 @@ author:
   name: Sergey Romanenko
   email: sergey.romanenko@flextype.org
   url: https://flextype.org
-homepage: https://github.com/flextype-plugins/flatpicker
-bugs: https://github.com/flextype-plugins/flatpicker/issues
+homepage: https://github.com/flextype-plugins/flatpickr
+bugs: https://github.com/flextype-plugins/flatpickr/issues
 license: MIT
 
 dependencies:
