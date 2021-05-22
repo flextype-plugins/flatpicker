@@ -12,7 +12,6 @@ assetsLoadOnSite: false
 blocks:
   Flatpickr:
     properties:
-      id: flatpickr
       name: flatpickr
       
       # Flatpickr options
