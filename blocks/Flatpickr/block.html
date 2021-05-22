@@ -14,7 +14,7 @@
 <input type="text"
         {{ include(template_from_string(attr.id(properties.id))) }}
         {{ include(template_from_string(attr.name(properties.name))) }}
-        {{ include(template_from_string(attr.value(properties.name, values, properties.value|date(flextype.registry.get('flextype.settings.date_display_format'))))) }}
+        value="{{ include(template_from_string(attr.value(properties.name, values, properties.value, false)))|date(flextype.registry.get('flextype.settings.date_display_format')) }}"
         {{ include(template_from_string(attr.class(['form-control', 'flatpickr', 'js-flatpickr', properties.class]))) }}
         {{ include(template_from_string(attr.data(properties.data))) }}
         {{ include(template_from_string(attr.style(properties.style))) }}
