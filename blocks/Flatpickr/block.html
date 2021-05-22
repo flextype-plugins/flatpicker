@@ -1,9 +1,9 @@
 {% import "plugins/blueprints/blocks/macros/attr.html" as attr %}
 
 {% if block.properties %}
-    {% set properties = arrays(flextype.registry.get("plugins.flatpicker.settings.blocks.Flatpicker.properties")).replace(block.properties, true).toArray() %}
+    {% set properties = arrays(flextype.registry.get("plugins.flatpickr.settings.blocks.Flatpickr.properties")).replace(block.properties, true).toArray() %}
 {% else %}
-    {% set properties = flextype.registry.get("plugins.flatpicker.settings.blocks.Flatpicker.properties") %}
+    {% set properties = flextype.registry.get("plugins.flatpickr.settings.blocks.Flatpickr.properties") %}
 {% endif %}
 
 {% if properties.label %}
