@@ -18,7 +18,7 @@ sass.compiler      = require('node-sass');
             'node_modules/flatpickr/dist/flatpickr.min.css',
 
             // Blocks
-            'blocks/InputFlatpickr/block.scss',
+            'blocks/Flatpickr/block.scss',
         ])
         .pipe(sass().on('error', sass.logError))
         .pipe(autoprefixer({
@@ -29,11 +29,11 @@ sass.compiler      = require('node-sass');
         }))
         .pipe(csso())
         .pipe(concat('flatpickr.min.css'))
-        .pipe(gulp.dest("blocks/InputFlatpickr/dist/css/"))
+        .pipe(gulp.dest("blocks/Flatpickr/dist/css/"))
         .pipe(size({ showFiles: true }))
         .pipe(gzip())
         .pipe(rename("flatpickr.min.css.gz"))
-        .pipe(gulp.dest("blocks/InputFlatpickr/dist/css/"))
+        .pipe(gulp.dest("blocks/Flatpickr/dist/css/"))
         .pipe(size({ showFiles: true, gzip: true }));
 });
 
@@ -47,14 +47,14 @@ sass.compiler      = require('node-sass');
             'node_modules/flatpickr/dist/flatpickr.min.js',
 
             // Blocks
-            'blocks/InputFlatpickr/block.js'
+            'blocks/Flatpickr/block.js'
         ])
         .pipe(concat('flatpickr.min.js'))
         .pipe(size({ showFiles: true }))
-        .pipe(gulp.dest('blocks/InputFlatpickr/dist/js/'))
+        .pipe(gulp.dest('blocks/Flatpickr/dist/js/'))
         .pipe(gzip())
         .pipe(rename("flatpickr.min.js.gz"))
-        .pipe(gulp.dest("blocks/InputFlatpickr/dist/js/"))
+        .pipe(gulp.dest("blocks/Flatpickr/dist/js/"))
         .pipe(size({ showFiles: true, gzip: true }));
 });
 
@@ -65,7 +65,7 @@ sass.compiler      = require('node-sass');
     return gulp
         .src(['node_modules/flatpickr/dist/*l10n/**/*.js'])
         .pipe(size({ showFiles: true }))
-        .pipe(gulp.dest('blocks/InputFlatpickr/dist/lang/flatpickr'));
+        .pipe(gulp.dest('blocks/Flatpickr/dist/lang/flatpickr'));
 });
 
 /**
