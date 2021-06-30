@@ -20,7 +20,7 @@ The following dependencies need to be downloaded and installed for Flatpickr Plu
 
 1. Download & Install all required dependencies.
 2. Create new folder `/project/plugins/flatpickr`
-3. Download Trumbowyg Plugin and unzip plugin content to the folder `/project/plugins/flatpickr`
+3. Download Flatpickr Plugin and unzip plugin content to the folder `/project/plugins/flatpickr`
 
 ## Documentation
 
