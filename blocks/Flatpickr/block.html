@@ -1,9 +1,9 @@
 {% import "plugins/blueprints/blocks/macros/attr.html" as attr %}
 
 {% if block.properties %}
-    {% set properties = arrays(flextype.registry.get("plugins.flatpickr.settings.blocks.Flatpickr.properties")).replace(block.properties, true).toArray() %}
+    {% set properties = arrays(registry().get("plugins.flatpickr.settings.blocks.Flatpickr.properties")).replace(block.properties, true).toArray() %}
 {% else %}
-    {% set properties = flextype.registry.get("plugins.flatpickr.settings.blocks.Flatpickr.properties") %}
+    {% set properties = registry().get("plugins.flatpickr.settings.blocks.Flatpickr.properties") %}
 {% endif %}
 
 {% set blockVisible = true %}
@@ -23,7 +23,7 @@
     <input type="text"
             {{ include(template_from_string(attr.id(properties.id))) }}
             {{ include(template_from_string(attr.name(properties.name))) }}
-            value="{{ include(template_from_string(attr.value(properties.name, values, properties.value, false)))|date(flextype.registry.get('flextype.settings.date_display_format')) }}"
+            value="{{ include(template_from_string(attr.value(properties.name, values, properties.value, false)))|date(registry().get('flextype.settings.date_display_format')) }}"
             {{ include(template_from_string(attr.class(['form-control', 'flatpickr', 'js-flatpickr', properties.class]))) }}
             {{ include(template_from_string(attr.data(properties.data))) }}
             {{ include(template_from_string(attr.style(properties.style))) }}
@@ -41,5 +41,5 @@
             value="{{ properties.name }}">
     <input type="hidden" 
             {{ attr.name(properties.name, '__flatpickr_options_') }}
-            value='{{ flextype.serializers.json.encode(properties.options) }}'>
+            value='{{ serializers().json.encode(properties.options) }}'>
 {% endif %}
